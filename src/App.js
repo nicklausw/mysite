@@ -4,6 +4,7 @@ import $ from 'jquery'
 import '../css/mystyles.css'
 import headshot from './pictures/headshot.jpg'
 
+
 function setDesktop() {
   if($(window).width() >= 1200) {
     $(".nameText").addClass("has-text-left");
@@ -18,13 +19,17 @@ function setDesktop() {
   }
 }
 
-// on document load, set size and fade in
-$(function() {
-  setDesktop();
-  $('#page').fadeIn(1000);
-});
 
-$(window).on("resize", setDesktop);
+// need this for export
+if (typeof window !== 'undefined') {
+  // on document load, set size and fade in
+  $(function() {
+    setDesktop();
+    $('#page').fadeIn(1000);
+  });
+
+  $(window).on("resize", setDesktop);
+}
 
 function haistenCard() {
   return (
