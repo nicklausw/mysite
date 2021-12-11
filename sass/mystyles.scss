@@ -1,0 +1,17 @@
+$black: hsl(0,0,0%);
+$card-radius:1em;
+
+@import "../node_modules/bulma/bulma.sass";
+
+.card {
+  min-height: 250px;
+}
+html {
+  background-color: $black;
+}
+section {
+  display: none;
+}
+.no-height {
+  height:0;
+}
