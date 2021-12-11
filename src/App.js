@@ -3,7 +3,6 @@ import $ from 'jquery'
 
 import '../css/mystyles.css'
 import headshot from './pictures/headshot.jpg'
-import haisten from './pictures/title.png'
 
 function setDesktop() {
   if($(window).width() >= 960) {
@@ -18,10 +17,12 @@ function setDesktop() {
     $(".subText").removeClass("mt-3");
   }
 }
+
 $(document).ready(function() {
   setDesktop();
   $('#page').fadeIn(1000);
 });
+
 $(window).resize(setDesktop);
 
 class App extends Component {
@@ -34,7 +35,7 @@ class App extends Component {
               <div className="content has-text-white has-text-centered">
                 <p className="is-size-1 m-0 nameText">Nicklaus Willis</p>
                 <p className="is-size-3 m-0 subText">Web Developer</p>
-                <figure className="image mb-0 is-inline-block is-128x128">
+                <figure className="image mb-0 is-inline-block mainImage">
                   <img className="is-rounded" src={headshot}/>
                 </figure>
                 <hr/>
@@ -44,8 +45,10 @@ class App extends Component {
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
-                            <figure className="image">
-                              <img className="is-rounded" src={haisten}/>
+                            <figure className="image mb-0">
+                              <a href="https://nicklausw.com/haisten/">
+                                <img className="is-rounded" src="https://nicklausw.com/haisten/pictures/title.png"/>
+                              </a>
                             </figure>
                           </div>
                         </div>
@@ -61,7 +64,7 @@ class App extends Component {
                   <div className="column is-6">
                     <div className="card has-background-grey has-text-black">
                       <div className="card-content">
-                        <p className="title mb-6 mt-5 is-3 has-text-black">iam.ilike</p>
+                        <p className="title mb-6 mt-5 is-3 has-text-black"><a href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
 
                         <div className="content is-size-5">
                           Demonstration of my SQL skills. Will eventually be redone with analytics

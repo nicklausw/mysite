@@ -1,17 +1,27 @@
 $black: hsl(0,0,0%);
+$grey: hsl(0,0,60%);
+$link: $black;
+
 $card-radius:1em;
 
 @import "../node_modules/bulma/bulma.sass";
 
 .card {
-  min-height: 250px;
+  min-height: 17.5em;
 }
+
 html {
   background-color: $black;
 }
+
 section {
   display: none;
 }
+
 .no-height {
   height:0;
+}
+
+.mainImage {
+  width: 10em;
 }

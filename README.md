@@ -1,3 +1,3 @@
-# React-Static - Blank Template
+# My website
 
-To use this template, run `react-static create` and select the `blank` template.
+Redone with react because why not. Created with react-static; uses bulma for css.
