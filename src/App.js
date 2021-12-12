@@ -107,6 +107,7 @@ function Card(props) {
   )
 }
 
+// small note: e-mail is "e&#x2011;mail" to utilize the non-breaking hyphen.
 class App extends Component {
   render() {
     return (
@@ -116,7 +117,7 @@ class App extends Component {
             <div className="column is-9">
               <div className="content has-text-white has-text-centered">
                 <p className="is-size-1 m-0 nameText">Nicklaus Willis</p>
-                <p className="is-size-3 m-0 subText">Web Developer / <a href="javascript:location='mailto:\u006e\u0040\u006e\u0069\u0063\u006b\u006c\u0061\u0075\u0073\u0077\u002e\u0063\u006f\u006d';void 0">e-mail</a> / <a href="tel:7708289753">phone</a></p>
+                <p className="is-size-3 m-0 subText">Web Developer / <a href="javascript:location='mailto:\u006e\u0040\u006e\u0069\u0063\u006b\u006c\u0061\u0075\u0073\u0077\u002e\u0063\u006f\u006d';void 0">e&#x2011;mail</a> / <a href="tel:7708289753">phone</a></p>
                 <figure className="image mb-0 mt-4 is-inline-block mainImage">
                   <img className="is-rounded" src={headshot}/>
                 </figure>
