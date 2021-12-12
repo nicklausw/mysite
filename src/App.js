@@ -21,6 +21,8 @@ if (typeof window !== 'undefined') {
   // on document load, set size and fade in
   $(function() {
     setDesktop();
+    $(".card:odd").addClass("has-background-grey-light");
+    $(".card:odd").removeClass("has-background-grey-lighter");
     $('#page').fadeIn(1000);
   });
 
@@ -51,7 +53,7 @@ function haistenCard() {
 function iamilike() {
   return (
     <div>
-      <p className="title mb-6 mt-5 is-3 has-text-black"><a href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
+      <p className="title mb-6 mt-5 is-3"><a className="has-text-black" href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
 
       <div className="content is-size-5">
         Demonstration of my SQL skills. Will eventually be redone with analytics
@@ -96,7 +98,7 @@ function coolCard() {
 function Card(props) {
   return (
     <div className="column is-6">
-      <div className="card has-background-grey has-text-black">
+      <div className="card has-background-grey-lighter has-text-black">
         <div className="card-content">
           {props.content}
         </div>
