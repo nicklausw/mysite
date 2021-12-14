@@ -1,33 +1,9 @@
 import React, { Component } from 'react'
-import $ from 'jquery'
 
 import '../css/mystyles.css'
 
 import headshot from './pictures/headshot.jpg'
 import githubLogo from './pictures/github-logo.png'
-
-function setDesktop() {
-  if($(window).width() >= 1200) {
-    $(".nameText").addClass("has-text-left no-height ml-2");
-    $(".subText").addClass("has-text-right mt-3 mr-2");
-  } else {
-    $(".nameText").removeClass("has-text-left no-height ml-2");
-    $(".subText").removeClass("has-text-right mt-3 mr-2");
-  }
-}
-
-// need this for export
-if (typeof window !== 'undefined') {
-  // on document load, set size and fade in
-  $(function() {
-    setDesktop();
-    $(".card:odd").addClass("has-background-grey-light");
-    $(".card:odd").removeClass("has-background-grey-lighter");
-    $('#page').fadeIn(1000);
-  });
-
-  $(window).on("resize", setDesktop);
-}
 
 function haistenCard() {
   return (
