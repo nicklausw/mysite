@@ -18,16 +18,41 @@ $card-radius:1em;
 // use this instead when adding new features
 // @import "../node_modules/bulma/bulma.sass"
 
+$textChange: $desktop + 200;
+$lessChange: $textChange - 1;
+
+@media (min-width: $textChange) {
+  .nameText {
+    text-align: left;
+    margin-left: $size-2;
+    height: 0;
+  }
+  .subText {
+    text-align: right;
+    margin-right: $size-2;
+    padding-top: $size-6;
+  }
+}
+
+@media (max-width: $lessChange) {
+  .nameText {
+    text-align: center;
+  }
+  .subText {
+    text-align: center;
+  }
+}
+
 .card {
   min-height: 17.5em;
 }
 
-html {
-  background-color: $black;
+.card:nth-of-type(2) {
+  background: $grey-lighter;
 }
 
-section {
-  display: none;
+html {
+  background-color: $black;
 }
 
 .no-height {
