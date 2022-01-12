@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import '../css/mystyles.css'
+import 'mystyles.scss'
 
 import headshot from './pictures/nick.jpeg'
 import githubLogo from './pictures/github-logo.png'

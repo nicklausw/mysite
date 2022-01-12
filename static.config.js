@@ -6,5 +6,6 @@
 // Get started at https://react-static.js.org
 
 export default {
-  siteRoot:"https://nicklausw.com"
+  siteRoot:"https://nicklausw.com",
+  plugins: ["react-static-plugin-sass"]
 }
