@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import '../css/mystyles.css'
 
-import headshot from './pictures/headshot.jpg'
+import headshot from './pictures/nick.jpeg'
 import githubLogo from './pictures/github-logo.png'
 
 function haistenCard() {
@@ -19,8 +19,7 @@ function haistenCard() {
       </div>
 
       <div className="content is-size-5">
-        I had the honor of making this website for a badass
-        journalist running for a badass position in a badass organization.
+        I had the honor of making this website for one of the most respected journalists of this generation.
       </div>
     </div>
   )
@@ -95,9 +94,9 @@ class App extends Component {
                 <p className="is-size-1 m-0 nameText">Nicklaus Willis</p>
                 <p className="is-size-3 m-0 subText">Web Developer / <a href="javascript:location='mailto:\u006e\u0040\u006e\u0069\u0063\u006b\u006c\u0061\u0075\u0073\u0077\u002e\u0063\u006f\u006d';void 0">e&#x2011;mail</a> / <a href="tel:7708289753">phone</a></p>
                 <figure className="image mb-0 mt-4 is-inline-block mainImage">
-                  <img className="is-rounded" src={headshot}/>
+                  <img src={headshot}/>
                 </figure>
-                <hr/>
+                <hr className="mt-0"/>
                 <div className="columns is-vcentered is-multiline">
                   <Card content={haistenCard()}/>
                   <Card content={iamilike()}/>
