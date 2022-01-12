@@ -19,9 +19,8 @@ $card-radius:1em;
 // @import "../node_modules/bulma/bulma.sass"
 
 $textChange: $desktop + 200;
-$lessChange: $textChange - 1;
 
-@media (min-width: $textChange) {
+@include from($textChange) {
   .nameText {
     text-align: left;
     margin-left: $size-2;
@@ -34,7 +33,7 @@ $lessChange: $textChange - 1;
   }
 }
 
-@media (max-width: $lessChange) {
+@include until($textChange) {
   .nameText {
     text-align: center;
   }
