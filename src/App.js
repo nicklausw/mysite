@@ -37,7 +37,7 @@ function fadeIn( elem, ms )
   }
 }
 
-if(window !== null) {
+if(typeof window !== 'undefined') {
   window.addEventListener('load', function(event) {
     fadeIn(document.getElementById("page"), 800);
   }); 
