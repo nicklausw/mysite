@@ -111,7 +111,7 @@ function siteCard() {
 function Card(props) {
   return (
     <div className="column is-6">
-      <div className="card has-background-grey-lighter has-text-black">
+      <div className="card has-text-black">
         <div className="card-content">
           {props.content}
         </div>

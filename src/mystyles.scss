@@ -44,10 +44,13 @@ $textChange: $desktop + 200;
 
 .card {
   min-height: 17.5em;
+  background-color: $grey-lighter;
 }
 
-.card:nth-of-type(2) {
-  background: $grey-light;
+// the card classes don't actually show up next to each other.
+// they're each inside a column class, so those are what we use nth-child on.
+.column:nth-child(2n) .card {
+  background-color: $grey-light;
 }
 
 html {
