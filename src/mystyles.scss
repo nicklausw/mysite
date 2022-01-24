@@ -42,8 +42,29 @@ $textChange: $desktop + 200;
   }
 }
 
+@include from($tablet) {
+  .column {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+
+  .columns {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+  }
+
+  .card {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .card {
-  min-height: 17.5em;
   background-color: $grey-lighter;
 }
 

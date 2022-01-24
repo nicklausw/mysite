@@ -66,7 +66,7 @@ function haistenCard() {
 function iamilike() {
   return (
     <div>
-      <p className="title mb-6 mt-5 is-3"><a className="has-text-black" href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
+      <p className="title is-3"><a className="has-text-black" href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">Demonstration of my SQL skills. Will eventually be redone with analytics
@@ -96,10 +96,22 @@ function githubCard() {
   )
 }
 
+function ndsaCard() {
+  return (
+    <div>
+      <p className="is-size-3 has-text-weight-bold mb-1"><a className="noHighlight" href="https://github.com/nicklausw/ndsa" target="_blank">NDSA - NDS C++ Engine</a></p>
+
+      <div className="content is-size-5">
+        <p className="has-text-weight-bold">Almost all homebrew coded for the Nintendo DS is in C. Here's a C++ header library incorporating an object system that demonstrates what everyone is missing out on.</p>
+      </div>
+    </div>
+  )
+}
+
 function siteCard() {
   return (
     <div>
-      <p className="is-size-3 has-text-weight-bold mt-3"><a className="noHighlight" href="https://github.com/nicklausw/mysite" target="_blank">This site is open source!</a></p>
+      <p className="is-size-3 has-text-weight-bold mb-2"><a className="noHighlight" href="https://github.com/nicklausw/mysite" target="_blank">This site is open source!</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">Click the text above to see the source code. I always have and always will love and support the "open-source initiative."</p>
@@ -135,10 +147,11 @@ class App extends Component {
                   <img src={headshot}/>
                 </figure>
                 <hr className="mt-0"/>
-                <div className="columns is-vcentered is-multiline">
+                <div className="columns is-vcentered is-centered is-multiline">
                   <Card content={haistenCard()}/>
                   <Card content={iamilike()}/>
                   <Card content={siteCard()}/>
+                  <Card content={ndsaCard()}/>
                   <Card content={githubCard()}/>
                 </div>
               </div>
