@@ -5,7 +5,24 @@
 
 // Get started at https://react-static.js.org
 
+import path from 'path';
+
 export default {
   siteRoot:"https://nicklausw.com",
-  plugins: ["react-static-plugin-sass"]
+  getRoutes: async () => {
+
+    return [
+    ]
+  },
+  plugins: [
+    ["react-static-plugin-sass"],
+    [
+      require.resolve('react-static-plugin-source-filesystem'),
+      {
+        location: path.resolve('./src/pages'),
+      },
+    ],
+    require.resolve('react-static-plugin-reach-router'),
+    require.resolve('react-static-plugin-sitemap'),
+  ]
 }

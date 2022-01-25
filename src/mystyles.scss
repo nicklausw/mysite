@@ -11,6 +11,7 @@ $card-radius:1em;
 @import "../node_modules/bulma/sass/elements/title.sass";
 @import "../node_modules/bulma/sass/elements/image.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/helpers/_all.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 @import "../node_modules/bulma/sass/grid/columns.sass";
@@ -18,31 +19,12 @@ $card-radius:1em;
 // use this instead when adding new features
 // @import "../node_modules/bulma/bulma.sass"
 
-$textChange: $desktop + 200;
-
-@include from($textChange) {
-  .nameText {
-    text-align: left;
-    margin-left: $size-2;
-    height: 0;
-  }
-  .subText {
-    text-align: right;
-    margin-right: $size-2;
-    padding-top: $size-6;
-  }
-}
-
-@include until($textChange) {
-  .nameText {
-    text-align: center;
-  }
-  .subText {
-    text-align: center;
-  }
-}
-
 @include from($tablet) {
+  nav {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .column {
     display: flex;
     justify-content: center !important;
@@ -57,10 +39,33 @@ $textChange: $desktop + 200;
   }
 
   .card {
+    width: 100%;
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@include until($desktop) {
+  // the below is for navbar fade effect
+  .navbar-menu {
+    display: block;
+    opacity: 0;
+  
+    position: absolute;   /* or float: left; width: 100%;*/
+    left: 0;
+    right: 0;
+
+    transform: translateY(-15%);
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .navbar-menu.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 }
 
@@ -78,10 +83,6 @@ html {
   background-color: $black;
 }
 
-section {
-  display: none;
-}
-
 .no-height {
   height:0;
 }
@@ -92,4 +93,8 @@ section {
 
 .noHighlight {
   color: $black;
+}
+
+.header-white h1, h2 {
+  color: $white !important;
 }
