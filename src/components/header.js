@@ -36,6 +36,10 @@ export default class Header extends React.Component {
             <Link onClick={burgerClick} className="navbar-item has-text-white has-background-black" to="/about">
               About
             </Link>
+
+            <Link onClick={burgerClick} className="navbar-item has-text-white has-background-black" to="/contact">
+              Contact
+            </Link>
             </div>
         </div>
       </nav>

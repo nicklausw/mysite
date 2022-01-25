@@ -3,7 +3,6 @@ import { Link, Router } from '@reach/router'
 
 import '../mystyles.scss'
 
-import headshot from '../pictures/nick.jpeg'
 import githubLogo from '../pictures/github-logo.png'
 
 function haistenCard() {
