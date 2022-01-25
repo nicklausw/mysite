@@ -4,6 +4,10 @@ $grey-lighter: hsl(0,0%,60%);
 
 $card-radius:1em;
 
+
+$color1: hsl(352, 70%, 80%);
+$color2: hsl(170, 75%, 75%);
+
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
@@ -70,13 +74,13 @@ $card-radius:1em;
 }
 
 .card {
-  background-color: $grey-lighter;
+  background-color: $color1;
 }
 
 // the card classes don't actually show up next to each other.
 // they're each inside a column class, so those are what we use nth-child on.
 .column:nth-child(2n) .card {
-  background-color: $grey-light;
+  background-color: $color2;
 }
 
 html {
