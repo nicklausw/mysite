@@ -12,7 +12,7 @@ function App() {
     <Root>
       <Header></Header>
       <div className="has-background-black has-text-white">
-        <React.Suspense fallback={<p className="is-size-3 is-italic has-text-white has-text-centered">Loading...</p>}>
+        <React.Suspense fallback={<p className="is-size-2 has-text-white has-text-centered pt-6">loading...</p>}>
           <Router>
             <Routes path="*" />
           </Router>
