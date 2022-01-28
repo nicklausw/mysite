@@ -93,3 +93,10 @@ html {
 .pre {
   overflow: auto;
 }
+
+a {
+  color: hsl(236, 100%, 70%);
+  &::focus {
+    color: hsl(236, 100%, 80%);
+  }
+}
