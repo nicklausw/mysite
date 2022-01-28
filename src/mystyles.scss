@@ -90,8 +90,13 @@ html {
 }
 
 // code blocks won't overflow horizontally
-.pre {
+pre {
   overflow: auto;
+  border-radius: 1em;
+}
+
+code {
+  border-radius: 1em;
 }
 
 a {
