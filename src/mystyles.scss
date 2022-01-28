@@ -88,3 +88,8 @@ html {
 .header-white h1, h2 {
   color: $white !important;
 }
+
+// code blocks won't overflow horizontally
+.pre {
+  overflow: auto;
+}
