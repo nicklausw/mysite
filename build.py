@@ -2,4 +2,5 @@
 import os
 os.environ["NODE_OPTIONS"] = "--openssl-legacy-provider"
 os.system("npm run build")
-os.system("cd dist && purgecss --content index.html */index.html *.*.js templates/__react_static_root__/src/pages/*.*.js --css styles.*.css --output styles.*.css")
+os.chdir(os.getcwd() + "/dist");
+os.system("purgecss --content index.html */index.html *.*.js templates/__react_static_root__/src/pages/*.*.js --css styles.*.css --output styles.*.css")

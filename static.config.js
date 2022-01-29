@@ -6,12 +6,26 @@
 // Get started at https://react-static.js.org
 
 import path from 'path';
+import posts from "./blog";
 
 export default {
   siteRoot:"https://nicklausw.com",
   getRoutes: async () => {
 
     return [
+      {
+        path: '/blog',
+        getData: () => ({
+          posts,
+        }),
+        children: posts.map(post => ({
+          path: `/post/${post.id}`,
+          template: 'src/containers/post',
+          getData: () => ({
+            post,
+          }),
+        })),
+      },
     ]
   },
   plugins: [
