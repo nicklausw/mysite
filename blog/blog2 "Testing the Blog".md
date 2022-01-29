@@ -1,0 +1,3 @@
+Just testing out my awesome blog setup. I wasn't going to revive the old WordPress blog because it felt pointless. "Hey, check out this cool website I designed. Like it? Too bad you have to go elsewhere to read my thoughts."
+
+So instead, I write the posts in Markdown, a Python script feeds them into a `json` file and now my website made with react can publish them. 😄 I considered writing the script in JavaScript for unity with the rest of the project, but let's be honest, this isn't a case where you'd actually want a unified coding language. The golden rule: use JS when you have to. That's it.
