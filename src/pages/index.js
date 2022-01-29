@@ -113,7 +113,7 @@ export default () => (
       <div className="columns is-centered">
         <div className="column is-9">
           <div className="content has-text-white has-text-centered">
-            <p className="has-text-weight-bold" style={{fontSize: "50px"}}>Welcome to my space.</p>
+            <p className="has-text-weight-bold mb-4" style={{fontSize: "50px"}}>Welcome to my space.</p>
             <hr className="mt-0"/>
             <div className="columns is-vcentered is-centered is-multiline">
               <Card content={haistenCard()}/>
