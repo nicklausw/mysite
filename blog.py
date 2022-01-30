@@ -11,7 +11,7 @@ for i in range(len(listdir)):
   thisText = thisFile.read()
   thisFile.close()
   title = listdir[i].split('"')[1::2]
-  thisText = thisText.replace("\n", "\\n").replace("\"", "\\\"");
+  thisText = thisText.replace("\n", "\\n").replace("\"", "\\\"")
   outFile.write("{\"id\": " + str(counter) + ", \"title\": \"" + title[0] + "\", \"body\": \"" + thisText + "\"}")
   counter = counter + 1
 outFile.write("]")
