@@ -18,11 +18,11 @@ export default function Post() {
             <div style={{textAlign: "center"}}>
               <h1 style={{fontSize: "50px"}}>{post.title}</h1>
             </div>
-            <p className="has-text-weight-bold is-italic m-2" style={{display: "inline-block"}}>
+            <p className="has-text-weight-bold is-italic mb-2">
               Date created: {post.created}
             </p>
             {post.modified !== undefined ? (
-              <p className="has-text-weight-bold is-italic m-2 mb-4" style={{display: "inline-block"}}>
+              <p className="has-text-weight-bold is-italic mb-2">
                 Date modified: {post.modified}
               </p>
             ) : (<div></div>)}

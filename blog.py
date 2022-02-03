@@ -39,7 +39,7 @@ for i in range(len(listdir)):
   if created == "":
     print("WARNING: No creation date for " + listdir[i])
       
-  thisText = thisText.replace("\n", "\\n").replace("\"", "\\\"")
+  thisText = thisText.strip("\n").replace("\n", "\\n").replace("\"", "\\\"")
 
   outFile.write("{")
   outFile.write("\"id\": " + str(counter) + ", ")
