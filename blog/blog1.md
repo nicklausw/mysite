@@ -1,3 +1,9 @@
+{
+  Title: "How nicklausw came to be"
+  Date created: "2022"
+  Date modified: "2/3/22"
+}
+
 # DS Game Maker: C coding
 I started coding at age 10 with [DS Game Maker.](https://dsgamemaker.online/) It was a fun and wonderful place to start: you use a nice GUI program and learn C coding while you're at it. It was extremely easy to figure out. I made a game for it called Ball Buster (good name, right?) which has been lost to time. There were 50 levels where you touch balls to pop them. It demonstrated a lack of programming knowledge below the surface (I wrote every level by hand, for instance) but gave me a starting point. I had something to grow upon.
 
