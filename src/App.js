@@ -15,6 +15,7 @@ function App() {
         <title>nicklausw</title>
         <meta name="title" content="nicklausw"/>
         <meta name="description" content="Web developer in Marietta, GA."/>
+        <meta property="og:image" content="https://www.nicklausw.com/embed.svg"/>
       </Helmet>
       <Header></Header>
       <div className="has-background-black has-text-white">
