@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet"
 
 import Header from 'components/header'
 
+import embedImage from "pictures/embed.svg"
+
 import 'mystyles.scss'
 
 function App() {
@@ -15,7 +17,8 @@ function App() {
         <title>nicklausw</title>
         <meta name="title" content="nicklausw"/>
         <meta name="description" content="Web developer in Marietta, GA."/>
-        <meta property="og:image" content="https://www.nicklausw.com/embed.svg"/>
+        <meta property="og:image" content={embedImage}/>
+        <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>
       <Header></Header>
       <div className="has-background-black has-text-white">
