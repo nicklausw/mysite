@@ -11,6 +11,8 @@ export default function Post() {
     <div>
       <MetaTags>
         <title>{post.title}</title>
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.body} />
       </MetaTags>
       <div className="section">
         <div className="container">
