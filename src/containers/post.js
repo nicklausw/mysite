@@ -3,17 +3,18 @@ import { useRouteData } from 'react-static'
 //
 import { Link } from '@reach/router'
 import ReactMarkdown from "react-markdown";
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
+
 
 export default function Post() {
   const { post } = useRouteData()
   return (
-    <div>
-      <MetaTags>
+    <React.Fragment>
+      <Helmet>
         <title>{post.title}</title>
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.body} />
-      </MetaTags>
+        <meta name="title" content={post.title}/>
+        <meta name="description" content={post.body}/>
+      </Helmet>
       <div className="section">
         <div className="container">
           <div className="content header-white">
@@ -32,6 +33,6 @@ export default function Post() {
           </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

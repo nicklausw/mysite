@@ -9,9 +9,7 @@ import path from 'path';
 import posts from "./blog";
 
 export default {
-  siteRoot:"https://nicklausw.com",
   getRoutes: async () => {
-
     return [
       {
         path: '/blog',
