@@ -15,6 +15,6 @@ Install [Python 3](https://www.python.org/) and [Node.JS](https://nodejs.org/en/
 git clone https://github.com/nicklausw/mysite.git
 cd mysite
 npm install
-npm install -g purgecss react-snap
+npm install -g purgecss react-snap react-static
 ~~~
 From there, you'll either want to execute `test.py` or `build.py`. `blog.py` builds the blog and is run automatically by the other scripts.
