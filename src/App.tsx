@@ -1,12 +1,12 @@
-import React from 'react'
-import { Root, Routes, addPrefetchExcludes } from 'react-static'
+import React from "react"
+import { Root, Routes, addPrefetchExcludes } from "react-static"
 //
 import { Link, Router } from '@reach/router'
 import { Helmet } from "react-helmet"
 
-import Header from 'components/header'
+import Header from "./components/header"
 
-import 'mystyles.scss'
+import "mystyles.scss"
 
 function App() {
   return (

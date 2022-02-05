@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
+import React from "react"
+import ReactDOM from "react-dom"
+import { AppContainer } from "react-hot-loader"
 
 // Your top level component
 import App from './App'
@@ -12,11 +12,11 @@ export default App
 if (typeof document !== 'undefined') {
   const target = document.getElementById('root')
 
-  const renderMethod = target.hasChildNodes()
+  const renderMethod = target!.hasChildNodes()
     ? ReactDOM.hydrate
     : ReactDOM.render
 
-  const render = Comp => {
+  const render = (Comp: Function) => {
     renderMethod(
       <AppContainer>
         <Comp />

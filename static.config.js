@@ -27,6 +27,7 @@ export default {
     ]
   },
   plugins: [
+    ['react-static-plugin-typescript'],
     ["react-static-plugin-sass"],
     [
       require.resolve('react-static-plugin-source-filesystem'),
@@ -36,5 +37,6 @@ export default {
     ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
-  ]
+  ],
+  entry: path.join(__dirname, 'src', 'index.tsx')
 }

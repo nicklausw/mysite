@@ -1,9 +1,9 @@
-import React from 'react'
-import { useRouteData } from 'react-static'
+import React from "react"
+import { useRouteData } from "react-static"
 //
-import { Link } from '@reach/router'
-import ReactMarkdown from "react-markdown";
-import { Helmet } from "react-helmet";
+import { Link } from "@reach/router"
+import ReactMarkdown from "react-markdown"
+import { Helmet } from "react-helmet"
 
 
 export default function Post() {

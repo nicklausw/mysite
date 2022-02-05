@@ -94,7 +94,7 @@ function historyCard() {
   )
 }
 
-function Card(props) {
+function Card(props: any) {
   return (
     <div className="column is-6">
       <div className="card has-text-black">

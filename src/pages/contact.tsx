@@ -1,5 +1,5 @@
-import React from 'react';
-import Obfuscate from 'react-obfuscate';
+import React from "react"
+import Obfuscate from "react-obfuscate"
 
 export default () => (
   <div className="section">
