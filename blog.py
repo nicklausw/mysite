@@ -21,18 +21,15 @@ for i in range(len(listdir)):
 
   header = thisText[thisText.find("{")+1:thisText.find("}")]
   splitHeader = header.split("\n")
-  thisText = thisText.replace("{" + header + "}\n\n", "")
+  thisText = thisText.replace("{" + header + "}", "")
   for c in splitHeader:
     c = c.strip()
     if c.startswith("Title: "):
-      c = c.lstrip("Title: ")
-      title = c.strip("\"")
+      title = c.lstrip("Title: ").strip("\"")
     elif c.startswith("Date created: "):
-      c = c.lstrip("Date created: ")
-      created = c.strip("\"")
+      created = c.lstrip("Date created: ").strip("\"")
     elif c.startswith("Date modified: "):
-      c = c.lstrip("Date modified: ")
-      modified = c.strip("\"")
+      modified = c.lstrip("Date modified: ").strip("\"")
 
   if title == "":
     print("WARNING: No title for " + listdir[i])
