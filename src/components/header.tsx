@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, Router } from '@reach/router'
+import React from "react"
+import { Link, Router } from "@reach/router"
 
 const burgerClick = () => {
   const el = document.getElementById("burger");

@@ -9,7 +9,8 @@ $color2: hsl(170, 75%, 75%);
 
 @import "../node_modules/bulma/bulma.sass";
 
-@include from($tablet) {
+// tablet and larger screen.
+@include tablet {
   nav {
     margin-left: 5%;
     margin-right: 5%;
@@ -37,7 +38,7 @@ $color2: hsl(170, 75%, 75%);
   }
 }
 
-@include until($desktop) {
+@include touch {
   // the below is for navbar fade effect
   .navbar-menu {
     display: block;
@@ -97,7 +98,7 @@ pre {
 
 a {
   color: hsl(236, 100%, 70%);
-  &::focus {
+  &:focus {
     color: hsl(236, 100%, 80%);
   }
 }
