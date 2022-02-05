@@ -14,6 +14,9 @@ export default function Post() {
         <title>{post.title}</title>
         <meta name="title" content={post.title}/>
         <meta name="description" content={post.body}/>
+        <meta name="og:title" content={post.title}/>
+        <meta name="og:description" content={post.body}/>
+        <meta name="author" content="nicklausw"/>
       </Helmet>
       <div className="section">
         <div className="container">
