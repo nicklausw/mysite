@@ -30,7 +30,7 @@ export default function Post() {
               <p className="has-text-weight-bold is-italic mb-2">
                 Date modified: {post.modified}
               </p>
-            ) : (<div></div>)}
+            ) : (<></>)}
             <ReactMarkdown children={post.body}/>
           </div>
         </div>

@@ -14,6 +14,7 @@ function App() {
         <title>nicklausw</title>
         <meta name="title" content="nicklausw"/>
         <meta name="description" content="Nicklaus Willis, web developer in Marietta, GA."/>
+        <meta name="og:title" content="nicklausw"/>
         <meta name="og:description" content="Nicklaus Willis, web developer in Marietta, GA."/>
         <meta property="og:image" content="https://www.nicklausw.com/embed.webp"/>
         <meta name="twitter:card" content="summary_large_image"/>
