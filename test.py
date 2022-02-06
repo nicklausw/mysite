@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 import os
-os.system("python3 blog.py")
+exec(compile(open("blog.py", "r").read(), "blog.py", "exec"))
 os.environ["NODE_OPTIONS"] = "--openssl-legacy-provider"
 os.system("npm start")
