@@ -83,7 +83,7 @@ function siteCard() {
 function historyCard() {
   return (
     <>
-      <p className="is-size-3 has-text-weight-bold mb-2"><a className="noHighlight" href="/about" target="_blank">Read about my background!</a></p>
+      <p className="is-size-3 has-text-weight-bold mb-2"><a className="noHighlight" href="/blog/post/1" target="_blank">Read about my background!</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">See how this self-taught programmer came to be.</p>
