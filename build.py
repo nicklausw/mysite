@@ -17,4 +17,4 @@ contentList = " ".join(\
   glob.glob("*.*.js") + \
   glob.glob("templates/__react_static_root__/src/*/*.*.js"))
 cssFile = " ".join(glob.glob("styles.*.css"))
-print("purgecss --safelist \"pre\" --content " + contentList + " --css " + cssFile + " --output " + cssFile)
+os.system("purgecss --safelist \"pre\" --content " + contentList + " --css " + cssFile + " --output " + cssFile)
