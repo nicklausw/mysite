@@ -4,6 +4,8 @@ import { useRouteData, Head } from "react-static"
 import { Link } from "@reach/router"
 import ReactMarkdown from "react-markdown"
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 export default function Post() {
   const { post } = useRouteData()
@@ -31,7 +33,23 @@ export default function Post() {
                 Date modified: {post.modified}
               </p>
             ) : (<></>)}
-            <ReactMarkdown children={post.body}/>
+            <ReactMarkdown children={post.body}
+               components={{ code({node, inline, className, children, ...props}) {
+                  const match = /language-(\w+)/.exec(className || '')
+                  return !inline && match ? (
+                    <SyntaxHighlighter
+                      children={String(children).replace(/\n$/, '')}
+                      style={vscDarkPlus}
+                      language={match[1]}
+                      PreTag="div"
+                      {...props}
+                    />
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  )
+                }}}/>
           </div>
         </div>
       </div>

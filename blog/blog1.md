@@ -32,7 +32,7 @@ This is where chronology gets fuzzy; I actually tried writing my own assembler n
 My assembler contributions don't stop at [WLA-DX](https://github.com/vhelin/wla-dx). I traded assemblers a lot, and tried to improve something about each one that was used. My biggest contribution to WLA-DX was that the assembler itself now takes more standard argument input. In any other assembler, writing flags like `-o main.s main.o` is completely backwards. In this program, it wasn't.
 
 My most useful assembler contributions were to [asm6f](https://github.com/freem/asm6f). This was fun to work on. The old-school NES assembler to use, [NESASM](https://github.com/camsaul/nesasm) is...decent. It has improved substantially over the years, but I still wouldn't use it. Why does anyone use it? There's at least one good reason: this assembler's way of handling the iNES header (a header for NES roms that describes the cartridge mapper) is the best around.
-~~~
+~~~assembly
 .inesprg 1   ; 1x 16KB PRG code
 .ineschr 1   ; 1x  8KB CHR data
 .inesmap 0   ; mapper 0 = NROM, no bank swapping
@@ -49,7 +49,7 @@ That's right, I made it happen. I always had the thought of "asm6 sure is great.
 My favorite part about asm6 was the lack of a linker. Who needs one? It makes things harder. So what if you could take that approach and make it target any processor architecture you like? That's when I discovered [bass.](https://github.com/ARM9/bass) The syntax was picky, the error messages weren't entirely helpful, but the fascination with this program never went away. Contributing to the codebase directly wasn't going to happen as byuu was very particular in his ways. Thus my own fork, [bass-ultima.](https://github.com/nicklausw/bass-ultima)
 
 Earlier I mentioned my completely changed approach to 65816 opcode sizes flipping. My biggest modification to bass demonstrated this: a `-require-modifier` flag. Take this code below.
-~~~
+~~~assembly
 adc #$1234 // 16-bit opcode size, as told by 4 numbers after hex symbol
 adc number // ???
 ~~~

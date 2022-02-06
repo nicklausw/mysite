@@ -1,7 +1,4 @@
 $black: hsl(0,0%,0%);
-$grey-light: hsl(0,0%,45%);
-$grey-lighter: hsl(0,0%,60%);
-
 $card-radius:1em;
 
 $color1: hsl(352, 70%, 80%);
@@ -93,12 +90,16 @@ html {
 // code blocks won't overflow horizontally
 pre {
   overflow: auto;
+  background-color: transparent !important;
+}
+
+code {
   border-radius: 1em;
 }
 
 a {
   color: hsl(236, 100%, 70%);
-  &:focus {
+  &:focus, &:hover {
     color: hsl(236, 100%, 80%);
   }
 }
