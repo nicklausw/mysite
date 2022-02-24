@@ -23,8 +23,12 @@ export default function Post() {
         <div className="container">
           <div className="content header-white">
             <div style={{textAlign: "center"}}>
-              <h1 style={{fontSize: "50px"}}>{post.title}</h1>
+              <h1 className="mb-3" style={{fontSize: "50px"}}>{post.title}</h1>
+              {post.subtitle !== undefined ? (
+                <h1 className="mt-0" style={{fontSize: "35px"}}>{post.subtitle}</h1>
+            ) : (<></>)}
             </div>
+
             <p className="has-text-weight-bold is-italic mb-2">
               Date created: {post.created}
             </p>

@@ -16,6 +16,7 @@ for i in range(len(listdir)):
   thisFile.close()
 
   title = ""
+  subtitle = ""
   created = ""
   modified = ""
 
@@ -26,6 +27,8 @@ for i in range(len(listdir)):
     c = c.strip()
     if c.startswith("Title: "):
       title = c.lstrip("Title: ").strip("\"")
+    elif c.startswith("Subtitle: "):
+      subtitle = c.lstrip("Subtitle: ").strip("\"")
     elif c.startswith("Date created: "):
       created = c.lstrip("Date created: ").strip("\"")
     elif c.startswith("Date modified: "):
@@ -44,6 +47,8 @@ for i in range(len(listdir)):
   outFile.write("\"created\": \"" + created + "\", ")
   if modified != "":
     outFile.write("\"modified\": \"" + modified + "\", ")
+  if subtitle != "":
+    outFile.write("\"subtitle\": \"" + subtitle + "\", ")
   outFile.write("\"body\": \"" + thisText + "\"}")
   counter = counter + 1
 outFile.write("]")
