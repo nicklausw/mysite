@@ -4,6 +4,5 @@ import os
 # build blog database
 exec(compile(open("blog.py", "r").read(), "blog.py", "exec"))
 
-# build actual site (comment out below line for node v16)
-os.environ["NODE_OPTIONS"] = "--openssl-legacy-provider"
+# test site on localhost:3000
 os.system("npm start")
