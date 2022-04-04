@@ -1,8 +1,8 @@
-{
-  Title: "Testing the Blog"
-  Date created: "2022"
-  Date modified: "2/3/22"
-}
+---
+title: Testing the Blog
+dateCreated: 2022
+dateModified: 2/3/22
+---
 
 Just testing out my awesome blog setup. I wasn't going to revive the old WordPress blog because it felt pointless. "Hey, check out this cool website I designed. Like it? Too bad you have to go elsewhere to read my thoughts."
 

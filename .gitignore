@@ -1,5 +1,3 @@
-artifacts
+.next
 node_modules
-tmp
-dist
-blog.json
+yarn-error.log

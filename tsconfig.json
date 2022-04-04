@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2015", "dom"],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "isolatedModules": true,
@@ -12,6 +15,17 @@
     "sourceMap": true,
     "removeComments": false,
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

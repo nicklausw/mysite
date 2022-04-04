@@ -1,8 +1,8 @@
-{
-  Title: "Comparse, Wordbot and Chinscraper"
-  Subtitle: "My Raspberry Pi-powered toys."
-  Date created: "2/24/22"
-}
+---
+title: Comparse, Wordbot and Chinscraper
+subtitle: My Raspberry Pi-powered toys.
+dateCreated: 2/24/22
+---
 
 They're the newest of my programs, though the latter 2 are redone versions of older ones. Here's a little bit about what each does, starting with the new and most dramatic one.
 
