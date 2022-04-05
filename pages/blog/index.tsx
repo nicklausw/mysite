@@ -43,7 +43,7 @@ function getPostsData() {
     const matterData = matter(postData)
     const headerData = matterData.data
     c++
-    return {id: String(c - 1), headerData, data: matterData.content}
+    return {id: String(c - 1), headerData}
   })
   return posts
 }
