@@ -1,22 +1,21 @@
-// pages/posts/[id].js
-
-import fs from 'fs'
+import {promises as fs} from 'fs'
+import path from 'path'
 
 import ReactMarkdown from 'react-markdown'
 
 import Header from "../../components/Header"
 import Head from 'next/head'
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"
+
 import matter from 'gray-matter'
 
-function Post({ post }) {
+function Post({ post } : { post : any}) {
   // Render post...
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"></link>
-      </Head>
-      <Header/>
+      <Header title={post.headerData.title} description={post.headerData.description}/>
       <div className="section">
         <div className="container">
           <div className="content header-white has-text-white">
@@ -35,7 +34,20 @@ function Post({ post }) {
                 Date modified: {post.headerData.dateModified}
               </p>
             ) : (<></>)}
-            <ReactMarkdown>{post.data}</ReactMarkdown>
+            <ReactMarkdown components={{ code({node, inline, className, children, ...props}) {
+              const match = /language-(\w+)/.exec(className || '')
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={vscDarkPlus}
+                  language={match[1]}
+                  {...props}
+                >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              )
+            }}}>{post.data}</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -46,7 +58,7 @@ function Post({ post }) {
 // This function gets called at build time
 export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
-  const posts = fs.readdirSync("blog")
+  const posts = await fs.readdir("blog")
   var c = 0
   var paths = []
   while(c < posts.length) {
@@ -60,20 +72,22 @@ export async function getStaticPaths() {
 }
 
 // This also gets called at build time
-export async function getStaticProps({ params }) {
-  const postsPre = fs.readdirSync("blog")
+export async function getStaticProps({ params } : { params : any }) {
+  const postsDir = path.join(process.cwd(), "blog")
+  const postsPre = await fs.readdir(postsDir)
   var c = 0
-  var posts = []
-  while (c < postsPre.length) {
-    var postData = fs.readFileSync("blog/" + postsPre[c]).toString()
+  const posts = postsPre.map(async (thisPost) => {
+    var postBuffer = await fs.readFile(path.join(process.cwd(), "blog/" + thisPost), "utf8")
+    var postData = postBuffer!.toString()
     const matterData = matter(postData)
     const headerData = matterData.data
-    posts.push({id: String(c), headerData, data: matterData.content})
     c++
-  }
+    return {id: String(c - 1), headerData, data: matterData.content}
+  })
+  const awaitedPosts = await Promise.all(posts)
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const post = await posts.filter(obj => {
+  const post = awaitedPosts.filter(obj => {
     return obj.id === params.id
   })[0]
 
