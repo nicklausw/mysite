@@ -1,15 +1,10 @@
-import {promises as fs} from 'fs'
-import path from 'path'
-
 import ReactMarkdown from 'react-markdown'
 
-import Header from "../../components/Header"
-import Head from 'next/head'
+import Header from "../../utils/Header"
+import getPostsData from "../../utils/Posts"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"
-
-import matter from 'gray-matter'
 
 function Post({ post } : { post : any}) {
   // Render post...
@@ -58,7 +53,7 @@ function Post({ post } : { post : any}) {
 // This function gets called at build time
 export async function getStaticPaths() {
   // Get the paths we want to pre-render based on posts
-  const posts = await fs.readdir("blog")
+  const posts = getPostsData(false)
   var c = 0
   var paths = []
   while(c < posts.length) {
@@ -73,21 +68,10 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps({ params } : { params : any }) {
-  const postsDir = path.join(process.cwd(), "blog")
-  const postsPre = await fs.readdir(postsDir)
-  var c = 0
-  const posts = postsPre.map(async (thisPost) => {
-    var postBuffer = await fs.readFile(path.join(process.cwd(), "blog/" + thisPost), "utf8")
-    var postData = postBuffer!.toString()
-    const matterData = matter(postData)
-    const headerData = matterData.data
-    c++
-    return {id: String(c - 1), headerData, data: matterData.content}
-  })
-  const awaitedPosts = await Promise.all(posts)
+  const posts = getPostsData(true)
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const post = awaitedPosts.filter(obj => {
+  const post = posts.filter(obj => {
     return obj.id === params.id
   })[0]
 

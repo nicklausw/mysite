@@ -1,11 +1,7 @@
-import fs from 'fs'
-import path from 'path'
+import Header from "../../utils/Header"
+import getPostsData from "../../utils/Posts"
 
-import Header from "../../components/Header"
 import Link from 'next/link'
-
-import matter from 'gray-matter'
-
 
 function Blog({ posts } : { posts : any }) {
   // Render post...
@@ -33,25 +29,10 @@ function Blog({ posts } : { posts : any }) {
   )
 }
 
-function getPostsData() {
-  const postsDir = path.join(process.cwd(), "blog")
-  const postsPre = fs.readdirSync(postsDir)
-  var c = 0
-  const posts = postsPre.map((thisPost) => {
-    var postBuffer = fs.readFileSync(path.join(process.cwd(), "blog/" + thisPost), "utf8")
-    var postData = postBuffer!.toString()
-    const matterData = matter(postData)
-    const headerData = matterData.data
-    c++
-    return {id: String(c - 1), headerData}
-  })
-  return posts
-}
-
 // This also gets called at build time
 export async function getStaticProps() {
   // Pass post data to the page via props
-  const posts = getPostsData()
+  const posts = getPostsData(false)
   return { props: { posts } }
 }
 

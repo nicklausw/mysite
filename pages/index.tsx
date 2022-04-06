@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import Header from '../utils/Header'
 
 function haistenCard() {
   return (
