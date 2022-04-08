@@ -11,15 +11,16 @@ function Post({ post } : { post : any}) {
   return (
     <>
       <Header title={post.headerData.title} description={post.headerData.description}/>
-      <div className="section">
+      <div className="section pt-2 pb-4">
         <div className="container">
           <div className="content header-white has-text-white">
-            <div style={{textAlign: "center"}}>
+            <div className="mb-6" style={{textAlign: "center"}}>
               <h1 className="mb-3" style={{fontSize: "50px"}}>{post.headerData.title}</h1>
               {post.headerData.subtitle !== undefined ? (
                 <h1 className="mt-0" style={{fontSize: "35px"}}>{post.headerData.subtitle}</h1>
             ) : (<></>)}
             </div>
+            <hr className="mt-3 mb-6"/>
 
             <p className="has-text-weight-bold is-italic mb-2">
               Date created: {post.headerData.dateCreated}

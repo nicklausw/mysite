@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <Header title="nicklausw - contact"/>
-      <div className="section">
+      <div className="section pt-2 pb-4">
         <div className="container">
           <div className="content has-text-white">
             <p className="is-size-5 has-text-centered pl-0">e-mail: <Email email="n@nicklausw.com"/></p>

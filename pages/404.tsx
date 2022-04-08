@@ -4,7 +4,7 @@ export default function page404 () {
   return (
     <>
     <Header title="nicklausw - 404"/>
-      <div className="section">
+      <div className="section pt-2 pb-4">
         <div className="container">
           <div className="content">
             <p className="has-text-white is-size-3 has-text-centered">
