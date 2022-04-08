@@ -1,5 +1,7 @@
 import Header from '../utils/Header'
 
+import Link from 'next/link'
+
 function haistenCard() {
   return (
     <>
@@ -20,14 +22,25 @@ function haistenCard() {
   )
 }
 
-function iamilike() {
+function comparseCard() {
   return (
     <>
-      <p className="title is-3"><a className="has-text-black" href="https://nicklausw.com/iam.ilike.2/">iam.ilike</a></p>
+      <p className="title is-3"><a className="has-text-black" href="https://github.com/nicklausw/comparse">Comparse: It&apos;s COBOL</a></p>
 
       <div className="content is-size-5">
-        <p className="has-text-weight-bold">Demonstration of my SQL skills. Will eventually be redone with analytics
-        to look at after taking the survey.</p>
+        <p className="has-text-weight-bold">That&apos;s right! Here&apos;s a math parser written with GnuCOBOL. It interfaces with C to create a Discord bot.</p>
+      </div>
+    </>
+  )
+}
+
+function wordbotCard() {
+  return (
+    <>
+      <p className="title is-3"><a className="has-text-black" href="https://github.com/nicklausw/wordbot">Wordbot</a></p>
+
+      <div className="content is-size-5">
+        <p className="has-text-weight-bold">Discord bot that tracks word usage among users in a database. Demonstrates proficiency with TypeScript and MySQL/MariaDB.</p>
       </div>
     </>
   )
@@ -56,7 +69,7 @@ function githubCard() {
 function ndsaCard() {
   return (
     <>
-      <p className="is-size-3 has-text-weight-bold mb-1"><a className="noHighlight" href="https://github.com/nicklausw/ndsa" target="_blank" rel="noreferrer">NDSA - NDS C++ Engine</a></p>
+      <p className="is-size-3 has-text-weight-bold mb-1"><a className="has-text-black" href="https://github.com/nicklausw/ndsa" target="_blank" rel="noreferrer">NDSA - NDS C++ Engine</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">A good amount of homebrew coded for the Nintendo DS is in C. Here&apos;s a C++ header library incorporating an object system that demonstrates what everyone is missing out on.</p>
@@ -68,7 +81,7 @@ function ndsaCard() {
 function siteCard() {
   return (
     <>
-      <p className="is-size-3 has-text-weight-bold mb-2"><a className="noHighlight" href="https://github.com/nicklausw/mysite" target="_blank" rel="noreferrer">This site is open source!</a></p>
+      <p className="is-size-3 has-text-weight-bold mb-2"><a className="has-text-black" href="https://github.com/nicklausw/mysite" target="_blank" rel="noreferrer">This site is open source!</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">Click the text above to see the source code. I always have and always will love and support the &quot;open-source initiative.&quot;</p>
@@ -77,13 +90,25 @@ function siteCard() {
   )
 }
 
-function historyCard() {
+function blogCard() {
   return (
     <>
-      <p className="is-size-3 has-text-weight-bold mb-2"><a className="noHighlight" href="/blog/0" target="_blank">Read about my background!</a></p>
+      <p className="is-size-3 has-text-weight-bold mb-2"><Link href="/blog/"><a className="has-text-black">Read the blog!</a></Link></p>
 
       <div className="content is-size-5">
-        <p className="has-text-weight-bold">See how this self-taught programmer came to be.</p>
+        <p className="has-text-weight-bold">I give updates on whatever it is I&apos;m working on. Read all about it.</p>
+      </div>
+    </>
+  )
+}
+
+function resumeCard() {
+  return (
+    <>
+      <p className="is-size-3 has-text-weight-bold mb-2"><Link href="/resume.pdf"><a className="has-text-black">My Résumé</a></Link></p>
+
+      <div className="content is-size-5">
+        <p className="has-text-weight-bold">Hire me.</p>
       </div>
     </>
   )
@@ -114,11 +139,13 @@ export default function indexPage() {
                 <hr className="mt-0"/>
                 <div className="columns is-vcentered is-centered is-multiline">
                   <Card content={haistenCard()}/>
-                  <Card content={iamilike()}/>
-                  <Card content={siteCard()}/>
+                  <Card content={wordbotCard()}/>
+                  <Card content={comparseCard()}/>
                   <Card content={ndsaCard()}/>
+                  <Card content={siteCard()}/>
                   <Card content={githubCard()}/>
-                  <Card content={historyCard()}/>
+                  <Card content={blogCard()}/>
+                  <Card content={resumeCard()}/>
                 </div>
               </div>
             </div>
