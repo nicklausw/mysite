@@ -15,7 +15,7 @@ function Blog({ posts } : { posts : any }) {
           {posts.map(({thisPost} : {thisPost : any}) => {
             c++;
             return (
-            <li key={posts[c-1].id}>
+            <li key={posts[c-1].id} style={{marginLeft:"1em"}}>
               <Link href={`blog/${posts[c-1].id}/`}>
                 <a>{posts[c-1].headerData.dateCreated} - {posts[c-1].headerData.title}</a>
               </Link>
