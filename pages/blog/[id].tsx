@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 
-import Header from "../../utils/Header"
-import getPostsData from "../../utils/Posts"
+import Header from "../../components/Header"
+import getPostsData from "../../components/Posts"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"

@@ -1,4 +1,4 @@
-import Header from '../utils/Header'
+import Header from '../components/Header'
 import { Email } from "react-obfuscate-email";
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import Header from '../utils/Header'
+import Header from '../components/Header'
 
 export default function page404 () {
   return (

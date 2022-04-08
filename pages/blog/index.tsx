@@ -1,5 +1,5 @@
-import Header from "../../utils/Header"
-import getPostsData from "../../utils/Posts"
+import Header from "../../components/Header"
+import getPostsData from "../../components/Posts"
 
 import Link from 'next/link'
 
