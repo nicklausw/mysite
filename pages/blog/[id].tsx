@@ -14,13 +14,13 @@ function Post({ post } : { post : any}) {
       <div className="section pt-2 pb-4">
         <div className="container">
           <div className="content header-white has-text-white">
-            <div className="mb-6" style={{textAlign: "center"}}>
-              <h1 className="mb-3" style={{fontSize: "50px"}}>{post.headerData.title}</h1>
+            <div style={{textAlign: "center"}}>
+              <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.headerData.title}</h1>
               {post.headerData.subtitle !== undefined ? (
-                <h1 className="mt-0" style={{fontSize: "35px"}}>{post.headerData.subtitle}</h1>
-            ) : (<></>)}
+                <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.headerData.subtitle}</h1>
+            ) : (<h1 className="mt-5 mb-3"></h1>)}
             </div>
-            <hr className="mt-3 mb-6"/>
+            <hr className="mt-0 mb-5"/>
 
             <p className="has-text-weight-bold is-italic mb-2">
               Date created: {post.headerData.dateCreated}

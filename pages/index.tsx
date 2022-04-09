@@ -25,7 +25,7 @@ function haistenCard() {
 function comparseCard() {
   return (
     <>
-      <p className="title is-3"><a className="has-text-black" href="https://github.com/nicklausw/comparse">Comparse: It&apos;s COBOL</a></p>
+      <p className="title is-3"><a className="has-text-black has-text-weight-bold" href="https://github.com/nicklausw/comparse">Comparse: It&apos;s COBOL</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">That&apos;s right! Here&apos;s a math parser written with GnuCOBOL. It interfaces with C to create a Discord bot.</p>
@@ -37,7 +37,7 @@ function comparseCard() {
 function wordbotCard() {
   return (
     <>
-      <p className="title is-3"><a className="has-text-black" href="https://github.com/nicklausw/wordbot">Wordbot</a></p>
+      <p className="title is-3"><a className="has-text-black has-text-weight-bold" href="https://github.com/nicklausw/wordbot">Wordbot</a></p>
 
       <div className="content is-size-5">
         <p className="has-text-weight-bold">Discord bot that tracks word usage among users in a database. Demonstrates proficiency with TypeScript and MySQL/MariaDB.</p>
