@@ -10,24 +10,24 @@ function Post({ post } : { post : any}) {
   // Render post...
   return (
     <>
-      <Header title={post.headerData.title} description={post.headerData.description}/>
+      <Header title={post.title} description={post.data}/>
       <div className="section pt-2 pb-4">
         <div className="container">
           <div className="content header-white has-text-white">
             <div style={{textAlign: "center"}}>
-              <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.headerData.title}</h1>
-              {post.headerData.subtitle !== undefined ? (
-                <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.headerData.subtitle}</h1>
+              <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.title}</h1>
+              {post.subtitle !== undefined ? (
+                <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.subtitle}</h1>
             ) : (<h1 className="mt-5 mb-3"></h1>)}
             </div>
             <hr className="mt-0 mb-5"/>
 
             <p className="has-text-weight-bold is-italic mb-2">
-              Date created: {post.headerData.dateCreated}
+              Date created: {post.dateCreated}
             </p>
-            {post.headerData.dateModified !== undefined ? (
+            {post.dateModified !== undefined ? (
               <p className="has-text-weight-bold is-italic mb-2">
-                Date modified: {post.headerData.dateModified}
+                Date modified: {post.dateModified}
               </p>
             ) : (<></>)}
             <ReactMarkdown components={{ code({node, inline, className, children, ...props}) {

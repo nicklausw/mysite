@@ -14,9 +14,9 @@ export default function getPostsData(needsText: boolean) {
     const data = matterData.content
     c++
     if(needsText)
-      return {id: String(c - 1), headerData, data}
+      return {id: String(c - 1), ...headerData, data}
     else
-      return {id: String(c - 1), headerData}
+      return {id: String(c - 1), ...headerData}
   })
   return posts
 }

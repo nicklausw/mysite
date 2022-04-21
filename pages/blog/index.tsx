@@ -19,7 +19,7 @@ function Blog({ posts } : { posts : any }) {
             return (
             <li key={posts[c-1].id} style={{marginLeft:"1em"}}>
               <Link href={`blog/${posts[c-1].id}/`}>
-                <a>{posts[c-1].headerData.dateCreated} - {posts[c-1].headerData.title}</a>
+                <a>{posts[c-1].dateCreated} - {posts[c-1].title}</a>
               </Link>
             </li>
             )
