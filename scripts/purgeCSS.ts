@@ -2,13 +2,12 @@
 import * as fs from "fs"
 import { PurgeCSS } from "purgecss"
 
-const filePaths = ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"];
+const filePaths = ["./out/**/*.html"];
 const cssPaths = ["./out/_next/static/css/*.css"];
 
 new PurgeCSS().purge({
   content: filePaths,
-  css: cssPaths,
-  safelist: ["html", "body"]
+  css: cssPaths
 }).then(purge => {
   purge.forEach(element => {
     var fileName = element.file!.split("/").pop();
