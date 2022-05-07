@@ -7,7 +7,8 @@ const cssPaths = ["./out/_next/static/css/*.css"];
 
 new PurgeCSS().purge({
   content: filePaths,
-  css: cssPaths
+  css: cssPaths,
+  safelist: ["html", "body"]
 }).then(purge => {
   purge.forEach(element => {
     var fileName = element.file!.split("/").pop();

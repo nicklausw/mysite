@@ -6,6 +6,8 @@ $color2: hsl(170, 75%, 75%);
 
 @import "../node_modules/bulma/bulma.sass";
 
+/*! purgecss start ignore */
+
 // tablet and larger screen.
 @include tablet {
   nav {
@@ -99,3 +101,5 @@ a {
     color: hsl(236, 100%, 80%);
   }
 }
+
+/*! purgecss end ignore */
