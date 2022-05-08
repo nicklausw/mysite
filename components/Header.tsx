@@ -11,6 +11,21 @@ const burgerClick = () => {
   $target?.classList.toggle('is-active');
 }
 
+type HeaderLinkProps = {
+  text: string;
+  href: string;
+}
+
+function HeaderLink(props: HeaderLinkProps) {
+  return (
+    <Link href={props.href}>
+      <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
+        {props.text}
+      </a>
+    </Link>
+  );
+}
+
 export type HeaderProps = {
   title?: string;
   description?: string;
@@ -53,35 +68,11 @@ export function Header(props: HeaderProps) {
         <div className="navbar-start"></div>
         <div className="navbar-end">
           <div id="navbarBasic" className="navbar-menu has-background-black">
-            <Link href="/">
-              <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
-                Home
-              </a>
-            </Link>
-
-            <Link href="/blog/0">
-              <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
-                About
-              </a>
-            </Link>
-
-            <Link href="/blog">
-              <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
-                Blog
-              </a>
-            </Link>
-
-            <Link href="/contact">
-              <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
-                Contact
-              </a>
-            </Link>
-
-            <Link href="/resume.pdf">
-              <a onClick={burgerClick} className="navbar-item has-text-white has-background-black">
-                Résumé
-              </a>
-            </Link>
+            <HeaderLink href="/" text="Home"/>
+            <HeaderLink href="/blog/0" text="About"/>
+            <HeaderLink href="/blog" text="Blog"/>
+            <HeaderLink href="/contact" text="Contact"/>
+            <HeaderLink href="/resume.pdf" text="Résumé"/>
           </div>
         </div>
       </nav>
