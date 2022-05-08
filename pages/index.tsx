@@ -114,7 +114,11 @@ function resumeCard() {
   )
 }
 
-function Card(props: any) {
+interface CardProps {
+  content: JSX.Element
+}
+
+function Card(props: CardProps) {
   return (
     <div className="column is-6">
       <div className="card has-text-black">
