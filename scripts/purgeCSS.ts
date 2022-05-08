@@ -2,7 +2,10 @@
 import * as fs from "fs"
 import { PurgeCSS } from "purgecss"
 
-const filePaths = ["./out/**/*.{html,js}"];
+const filePaths = [
+  "./out/**/*.html",
+  "./out/_next/static/chunks/pages/**/*.js"
+];
 const cssPaths = ["./out/_next/static/css/*.css"];
 
 new PurgeCSS().purge({
