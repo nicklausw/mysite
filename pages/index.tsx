@@ -114,7 +114,7 @@ function resumeCard() {
   )
 }
 
-interface CardProps {
+type CardProps = {
   content: JSX.Element
 }
 
