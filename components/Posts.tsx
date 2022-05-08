@@ -1,8 +1,22 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { ParsedUrlQuery } from 'querystring'
 
-export default function getPostsData(needsText: boolean) {
+export type PostObject = {
+  title?: string;
+  subtitle?: string;
+  dateCreated?: string;
+  dateModified?: string;
+  data?: string;
+  id?: string;
+}
+
+export interface PostParams extends ParsedUrlQuery {
+  id: string
+}
+
+export function getPostsData(needsText: boolean): PostObject[] {
   const postsDir = path.join(process.cwd(), "blog")
   const postsPre = fs.readdirSync(postsDir)
   var c = 0

@@ -1,12 +1,14 @@
 import ReactMarkdown from 'react-markdown'
 
 import Header from "../../components/Header"
-import getPostsData from "../../components/Posts"
+import { getPostsData, PostObject, PostParams } from "../../components/Posts"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
-function Post({ post } : { post : any}) {
+import type { GetStaticPaths, GetStaticProps } from "next"
+
+function Post({ post } : { post : PostObject }) {
   // Render post...
   return (
     <>
@@ -43,7 +45,7 @@ function Post({ post } : { post : any}) {
                   {children}
                 </code>
               )
-            }}}>{post.data}</ReactMarkdown>
+            }}}>{post.data!}</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@ function Post({ post } : { post : any}) {
 }
 
 // This function gets called at build time
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on posts
   const posts = getPostsData(false)
   var c = 0
@@ -68,7 +70,8 @@ export async function getStaticPaths() {
 }
 
 // This also gets called at build time
-export async function getStaticProps({ params } : { params : any }) {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const params = context.params as PostParams;
   const posts = getPostsData(true)
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
