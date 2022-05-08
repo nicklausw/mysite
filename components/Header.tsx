@@ -11,12 +11,19 @@ const burgerClick = () => {
   $target?.classList.toggle('is-active');
 }
 
-export default function Header({ title, description } : { title?: string, description?: string }) {
-  if(title === undefined) {
-    title = "nicklausw"
+type HeaderProps = {
+  title?: string;
+  description?: string;
+}
+
+export default function Header(props: HeaderProps) {
+  var title = "nicklausw";
+  var description = "nicklausw, programmer in Marietta, GA.";
+  if(props.title !== undefined) {
+    title = props.title;
   }
-  if(description === undefined) {
-    description = "nicklausw, programmer in Marietta, GA."
+  if(props.description !== undefined) {
+    description = props.description;
   }
   return (
     <>
