@@ -7,10 +7,10 @@
 
 ## What's in the folders?
 * [`blog`](blog) - blog posts in Markdown format.
-* [`components`](components) - reused code in the website. Example: the site's header.
+* [`components`](components) - React components. Example: the site header.
 * [`pages`](pages) - actual website pages. These line up with the website's .html output.
 * [`public`](public) - stuff that goes in the root of the website. Example: pictures and `.htaccess`.
-* [`scripts`](scripts) - scripts **not** used by the website, like running PurgeCSS (part of the build process).
+* [`scripts`](scripts) - scripts that don't use JSX. Example: PurgeCSS, blog post data grabber.
 * [`styles`](styles) - all the website's SCSS.
 
 ## How do I work with it?

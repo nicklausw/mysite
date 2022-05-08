@@ -4,6 +4,6 @@
     "strict": true
   },
   "include": [
-    "**/*.ts"
+    "purgeCSS.ts"
   ]
 }

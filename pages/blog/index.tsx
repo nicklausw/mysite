@@ -1,5 +1,5 @@
 import Page from "../../components/Page"
-import { PostObject, getPostsData } from "../../components/Posts"
+import { PostObject, getPostsData } from "../../scripts/posts"
 
 import Link from 'next/link'
 import type { GetStaticProps } from "next"
