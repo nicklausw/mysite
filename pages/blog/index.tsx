@@ -1,4 +1,4 @@
-import Header from "../../components/Header"
+import Page from "../../components/Page"
 import { PostObject, getPostsData } from "../../components/Posts"
 
 import Link from 'next/link'
@@ -8,10 +8,9 @@ function Blog({ posts } : { posts : PostObject[] }) {
   // Render post...
   return (
     <>
-      <Header title="nicklausw - blog"/>
-      <div className="section pt-2 pb-4">
-        <div className="container header-white is-size-3">
-          <p className="has-text-weight-bold has-text-centered has-text-white mb-4" style={{fontSize: "50px"}}>blog</p>
+      <Page title="nicklausw - blog">
+        <div className="is-size-3">
+          <p className="has-text-weight-bold has-text-centered mb-4" style={{fontSize: "50px"}}>blog</p>
           <hr className="mt-0"/>
           <ul style={{display:"flex", flexDirection: "column-reverse", listStyleType: "circle"}}>
           {posts.map(thisPost => {
@@ -25,7 +24,7 @@ function Blog({ posts } : { posts : PostObject[] }) {
           })}
           </ul>
         </div>
-      </div>
+      </Page>
     </>
   )
 }

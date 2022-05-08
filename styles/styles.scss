@@ -63,6 +63,10 @@ $color2: hsl(170, 75%, 75%);
   background-color: $color1;
 }
 
+hr {
+  background-color: $white;
+}
+
 // the card classes don't actually show up next to each other.
 // they're each inside a column class, so those are what we use nth-child on.
 .column:nth-child(2n) .card {
@@ -88,7 +92,6 @@ html {
 // code blocks won't overflow horizontally
 pre {
   overflow: auto;
-  background-color: transparent !important;
 }
 
 code {

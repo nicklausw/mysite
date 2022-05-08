@@ -1,6 +1,6 @@
-import Header from '../components/Header'
+import Page from "../components/Page"
 
-import Link from 'next/link'
+import Link from "next/link"
 
 function haistenCard() {
   return (
@@ -132,30 +132,25 @@ function Card(props: CardProps) {
 
 export default function indexPage() {
   return (
-    <>
-      <Header/>
-      <div className="section pt-2 pb-4" id="page">
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-9">
-              <div className="content has-text-white has-text-centered">
-                <p className="has-text-weight-bold mb-4" style={{fontSize: "50px"}}>Welcome to my space.</p>
-                <hr className="mt-0"/>
-                <div className="columns is-vcentered is-centered is-multiline">
-                  <Card content={haistenCard()}/>
-                  <Card content={wordbotCard()}/>
-                  <Card content={comparseCard()}/>
-                  <Card content={ndsaCard()}/>
-                  <Card content={siteCard()}/>
-                  <Card content={githubCard()}/>
-                  <Card content={blogCard()}/>
-                  <Card content={resumeCard()}/>
-                </div>
-              </div>
+    <Page>
+      <div className="columns is-centered has-text-centered">
+        <div className="column is-9">
+          <div className="content">
+            <p className="has-text-weight-bold mb-4" style={{fontSize: "50px"}}>Welcome to my space.</p>
+            <hr className="mt-0"/>
+            <div className="columns is-vcentered is-centered is-multiline">
+              <Card content={haistenCard()}/>
+              <Card content={wordbotCard()}/>
+              <Card content={comparseCard()}/>
+              <Card content={ndsaCard()}/>
+              <Card content={siteCard()}/>
+              <Card content={githubCard()}/>
+              <Card content={blogCard()}/>
+              <Card content={resumeCard()}/>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </Page>
   )
 }

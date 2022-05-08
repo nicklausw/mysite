@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 
-import Header from "../../components/Header"
+import Page from "../../components/Page"
 import { getPostsData, PostObject, PostParams } from "../../components/Posts"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
@@ -11,45 +11,40 @@ import type { GetStaticPaths, GetStaticProps } from "next"
 function Post({ post } : { post : PostObject }) {
   // Render post...
   return (
-    <>
-      <Header title={post.title} description={post.data}/>
-      <div className="section pt-2 pb-4">
-        <div className="container">
-          <div className="content header-white has-text-white">
-            <div style={{textAlign: "center"}}>
-              <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.title}</h1>
-              {post.subtitle !== undefined ? (
-                <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.subtitle}</h1>
-              ) : (<h1 className="mt-5 mb-3"></h1>)}
-            </div>
-            <hr className="mt-0 mb-5"/>
-
-            <p className="has-text-weight-bold is-italic mb-2">
-              Date created: {post.dateCreated}
-            </p>
-            {post.dateModified !== undefined ? (
-              <p className="has-text-weight-bold is-italic mb-2">
-                Date modified: {post.dateModified}
-              </p>
-            ) : (<></>)}
-            <ReactMarkdown components={{ code({node, inline, className, children, ...props}) {
-              const match = /language-(\w+)/.exec(className || '')
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  style={vscDarkPlus}
-                  language={match[1]}
-                  {...props}
-                >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              )
-            }}}>{post.data!}</ReactMarkdown>
-          </div>
+    <Page title={post.title} description={post.data}>
+      <div className="content header-white">
+        <div style={{textAlign: "center"}}>
+          <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.title}</h1>
+          {post.subtitle !== undefined ? (
+            <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.subtitle}</h1>
+          ) : (<h1 className="mt-5 mb-3"></h1>)}
         </div>
+        <hr className="mt-0 mb-5"/>
+
+        <p className="has-text-weight-bold is-italic mb-2">
+          Date created: {post.dateCreated}
+        </p>
+        {post.dateModified !== undefined ? (
+          <p className="has-text-weight-bold is-italic mb-2">
+            Date modified: {post.dateModified}
+          </p>
+        ) : (<></>)}
+        <ReactMarkdown components={{ code({node, inline, className, children, ...props}) {
+          const match = /language-(\w+)/.exec(className || '')
+          return !inline && match ? (
+            <SyntaxHighlighter
+              style={vscDarkPlus}
+              language={match[1]}
+              {...props}
+            >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
+          ) : (
+            <code className={className} {...props}>
+              {children}
+            </code>
+          )
+        }}}>{post.data!}</ReactMarkdown>
       </div>
-    </>
+    </Page>
   )
 }
 
