@@ -1,8 +1,6 @@
-import Header from "./Header"
+import { Header, HeaderProps } from "./Header"
 
-type PageProps = {
-  title?: string;
-  description?: string;
+type PageProps = HeaderProps & {
   children: JSX.Element | JSX.Element[];
 }
 

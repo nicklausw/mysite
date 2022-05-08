@@ -11,12 +11,12 @@ const burgerClick = () => {
   $target?.classList.toggle('is-active');
 }
 
-type HeaderProps = {
+export type HeaderProps = {
   title?: string;
   description?: string;
 }
 
-export default function Header(props: HeaderProps) {
+export function Header(props: HeaderProps) {
   var title = "nicklausw";
   var description = "nicklausw, programmer in Marietta, GA.";
   if(props.title !== undefined) {
