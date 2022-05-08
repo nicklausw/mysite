@@ -20,7 +20,7 @@ function Post({ post } : { post : PostObject }) {
               <h1 className="mb-0 has-text-weight-semibold" style={{fontSize: "50px"}}>{post.title}</h1>
               {post.subtitle !== undefined ? (
                 <h1 className="mt-0 mb-3 is-italic has-text-weight-light" style={{fontSize: "35px"}}>{post.subtitle}</h1>
-            ) : (<h1 className="mt-5 mb-3"></h1>)}
+              ) : (<h1 className="mt-5 mb-3"></h1>)}
             </div>
             <hr className="mt-0 mb-5"/>
 
