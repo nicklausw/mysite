@@ -1,6 +1,6 @@
 import Page from "../components/Page"
 
-export default function page404 () {
+export default function page404() {
   return (
     <Page title="nicklausw - 404">
       <p className="is-size-3 has-text-centered mt-6">

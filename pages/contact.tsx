@@ -1,7 +1,7 @@
 import Page from "../components/Page"
 import { Email } from "react-obfuscate-email";
 
-export default function Home() {
+export default function Contact() {
   return (
     <Page title="nicklausw - contact">
       <div className="pt-6">
