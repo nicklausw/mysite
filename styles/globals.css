@@ -1,0 +1,31 @@
+@import "variables.css";
+@import "navbar.css";
+@import "background.css";
+
+.card-color {
+  background-color: var(--pink);
+}
+.card-container:nth-child(2n) .card-color {
+  background-color: var(--bluish) !important;
+}
+
+@media screen(sm) {
+  .mw-image {
+    max-width: 40%;
+  }
+}
+
+pre {
+  background-color: white;
+  color: black;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+a {
+  color: hsl(236, 100%, 70%);
+  transition: all .25s ease;
+  &:focus, &:hover {
+    color: hsl(236, 100%, 80%);
+  }
+}

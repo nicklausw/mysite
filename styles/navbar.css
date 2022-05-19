@@ -1,0 +1,28 @@
+.button {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  margin-left: .5em;
+  margin-right: .5em;
+  padding: 8px 8px;
+}
+
+/* lg = 1024. subtract 1 for "include until lg" */
+@media screen and (max-width: 1023px) {
+  .navbar-hidden {
+    visibility: hidden;
+    opacity: 0 !important;
+    transform: translateY(0%) !important;
+  }
+  .button {
+    padding: .6em .0em .6em 2em;
+    margin: 0;
+  }
+  .header-list {
+    transform: translateY(62.5%);
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    pointer-events: auto;
+  }
+}

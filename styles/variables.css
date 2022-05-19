@@ -1,0 +1,8 @@
+:root {
+  --pink: hsl(352, 70%, 80%);
+  --bluish: hsl(170, 75%, 75%);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

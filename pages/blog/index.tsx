@@ -9,20 +9,24 @@ function Blog({ posts } : { posts : PostObject[] }) {
   return (
     <>
       <Page title="nicklausw - blog">
-        <div className="is-size-3">
-          <p className="has-text-weight-bold has-text-centered mb-4" style={{fontSize: "50px"}}>blog</p>
-          <hr className="mt-0"/>
-          <ul style={{display:"flex", flexDirection: "column-reverse", listStyleType: "circle"}}>
-          {posts.map(thisPost => {
-            return (
-            <li key={thisPost.id} style={{marginLeft:"1em"}}>
-              <Link href={`blog/${thisPost.id}/`}>
-                <a>{thisPost.dateCreated} - {thisPost.title}</a>
-              </Link>
-            </li>
-            )
-          })}
-          </ul>
+        <div className="flex justify-center mx-auto text-white w-3/4">
+          <div className="block">
+            <p className="font-bold text-center text-6xl">
+              blog
+            </p>
+            <hr className="m-5"/>
+            <ul style={{display:"flex", flexDirection: "column-reverse", listStyleType: "circle"}}>
+            {posts.map(thisPost => {
+              return (
+              <li className="text-2xl lg:text-4xl leading-normal lg:leading-relaxed" key={thisPost.id} style={{marginLeft:"1em"}}>
+                <Link href={`/blog/${thisPost.id}/`}>
+                  <a>{thisPost.dateCreated} - {thisPost.title}</a>
+                </Link>
+              </li>
+              )
+            })}
+            </ul>
+          </div>
         </div>
       </Page>
     </>

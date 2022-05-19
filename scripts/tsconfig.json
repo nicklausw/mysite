@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "strict": true
-  },
-  "include": [
-    "purgeCSS.ts"
-  ]
-}

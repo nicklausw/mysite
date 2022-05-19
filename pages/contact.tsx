@@ -4,10 +4,12 @@ import { Email } from "react-obfuscate-email";
 export default function Contact() {
   return (
     <Page title="nicklausw - contact">
-      <div className="pt-6">
-        <p className="is-size-3 has-text-centered pl-0">e-mail: <Email email="n@nicklausw.com"/></p>
+      <div className="flex opaque-background p-6 mx-auto justify-center text-center w-3/4 rounded-xl">
+        <p className="text-3xl text-white">
+        <p>e-mail: <Email email="n@nicklausw.com"/></p>
         <br/>
-        <p className="is-size-3 has-text-centered pl-0">phone: <a href="tel:7708289753">7708289753</a></p>
+        <p>phone: <a href="tel:7708289753">7708289753</a></p>
+        </p>
       </div>
     </Page>
   )

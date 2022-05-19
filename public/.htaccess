@@ -8,4 +8,4 @@ RewriteRule ^(.*)$ https://www.nicklausw.com/$1 [R,L]
 Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404/index.html
