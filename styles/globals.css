@@ -1,6 +1,9 @@
 @import "variables.css";
 @import "navbar.css";
-@import "background.css";
+
+html {
+  background-color: #000000;
+}
 
 .card-color {
   background-color: var(--pink);
@@ -20,6 +23,7 @@ pre {
   color: black;
   padding: 1em;
   border-radius: 1em;
+  overflow: scroll;
 }
 
 a {
