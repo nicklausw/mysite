@@ -11,14 +11,14 @@ function Blog({ posts } : { posts : PostObject[] }) {
       <Page title="nicklausw - blog">
         <div className="flex justify-center mx-auto text-white w-3/4">
           <div className="block">
-            <p className="font-bold text-center text-6xl">
+            <p className="font-bold text-center text-5xl">
               blog
             </p>
             <hr className="m-5"/>
             <ul style={{display:"flex", flexDirection: "column-reverse", listStyleType: "circle"}}>
             {posts.map(thisPost => {
               return (
-              <li className="text-2xl lg:text-4xl leading-normal lg:leading-relaxed" key={thisPost.id} style={{marginLeft:"1em"}}>
+              <li className="text-2xl leading-normal lg:leading-relaxed" key={thisPost.id} style={{marginLeft:"1em"}}>
                 <Link href={`/blog/${thisPost.id}/`}>
                   <a>{thisPost.dateCreated} - {thisPost.title}</a>
                 </Link>

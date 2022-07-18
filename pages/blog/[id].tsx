@@ -33,12 +33,14 @@ function Post({ post } : { post : PostObject }) {
 
           <ReactMarkdown 
           components={{
-            p: ({node, ...props}) => <p className="my-4 text-lg" {...props} />,
+            p: ({node, ...props}) => <p className="my-4 text-md" {...props} />,
             h1: ({node, ...props}) => <p className="mb-4 mt-6 text-3xl font-semibold" {...props} />,
+            img: ({node, ...props}) => <img className="rounded-lg" {...props}/>,
             code({node, inline, className, children, ...props}) {
               const match = /language-(\w+)/.exec(className || '')
               return !inline && match ? (
                 <SyntaxHighlighter
+                  // @ts-ignore
                   style={vscDarkPlus}
                   language={match[1]}
                   {...props}
