@@ -48,7 +48,7 @@ export function Header(props: HeaderProps) {
         <meta name="description" content={description} key="description"/>
         <meta name="og:title" content={title} key="og:title"/>
         <meta name="og:description" content={description} key="og:description"/>
-        <meta property="og:image" content="https://www.thewillisbros.com/embed.webp"/>
+        <meta property="og:image" content="https://www.nicklausw.com/embed.webp"/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Head>
 

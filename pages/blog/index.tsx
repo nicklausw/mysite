@@ -9,7 +9,7 @@ function Blog({ posts } : { posts : PostObject[] }) {
   return (
     <>
       <Page title="nicklausw - blog">
-        <div className="flex justify-center mx-auto text-white w-3/4">
+        <div className="flex justify-center mx-auto text-white w-11/12 lg:w-3/4">
           <div className="block">
             <p className="font-bold text-center text-5xl">
               blog
