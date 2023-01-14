@@ -50,6 +50,7 @@ export function Header(props: HeaderProps) {
         <meta name="og:description" content={description} key="og:description"/>
         <meta property="og:image" content="https://www.nicklausw.com/embed.webp"/>
         <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="darkreader" content="the site is already dark!"/>
       </Head>
 
       {/* navbar */}
@@ -77,7 +78,6 @@ export function Header(props: HeaderProps) {
           <div className="text-sm">
             <li className="flex flex-col lg:flex-row">
               <HeaderLink href="/" text="Home"/>
-              <HeaderLink href="/blog/0" text="About"/>
               <HeaderLink href="/blog" text="Blog"/>
               <HeaderLink href="/contact" text="Contact"/>
               <HeaderLink href="/resume.pdf" text="Résumé"/>
