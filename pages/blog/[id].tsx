@@ -51,7 +51,11 @@ function Post({ post } : { post : PostObject }) {
                   {children}
                 </code>
               )
-            }}}>{post.data!}
+            }}}>
+              {/* in the VS code markdown preview, images
+                * only show properly when you link to
+                * the ../public directory. */}
+              {post.data!.replace("../public", "")}
           </ReactMarkdown>
         </div>
       </div>
