@@ -48,7 +48,7 @@ export default function Index() {
         <hr className="mt-6"/>
       </div>
       <div className="flex flex-wrap justify-center flex-row items-stretch text-black w-3/4 lg:w-3/5 mx-auto">
-        <Card image="https://nicklausw.com/haisten/pictures/title.png" href="https://nicklausw.com/haisten/" imageWidth="400px" imageHeight="100px">
+        <Card image="https://static.nicklausw.com/haisten/pictures/title.png" href="https://static.nicklausw.com/haisten/" imageWidth="400px" imageHeight="100px">
           <>
             I had the honor of making this website for one of the most respected journalists of this generation.
           </>
@@ -95,7 +95,7 @@ export default function Index() {
           </>
         </Card>
 
-        <Card title="My Résumé" href="https://nicklausw.com/resume.pdf">
+        <Card title="My Résumé" href="https://static.nicklausw.com/resume.pdf">
           <>
             Hire me.
           </>
