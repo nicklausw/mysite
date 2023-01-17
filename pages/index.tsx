@@ -18,7 +18,7 @@ function Card(props: CardProps) {
     <div className="flex flex-col items-center text-center w-full lg:w-1/2 lg:px-3 card-container">
       <div className="flex w-full h-full items-center justify-center card-color m-3 rounded-xl">
         <div className="block p-6 lg:p-8 rounded-xl">
-          <a className="text-black hover:text-black" href={props.href} target="_blank" rel="noreferrer">
+          <a className="text-black hover:text-black focus:text-black" href={props.href} target="_blank" rel="noreferrer">
             {props.title !== undefined ? (
             <p className="text-3xl text-black font-bold">
               {props.title}
